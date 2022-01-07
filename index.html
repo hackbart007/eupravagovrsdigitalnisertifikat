@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<!-- saved from url=(0316)https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D? -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style>
+        #resetBtn {
+            background-color: white;
+            color: rgb(40, 60, 120);
+            height: 30px;
+            width: 300px;
+            margin: auto;
+            margin-bottom: 3px;
+        }
+
+        .container {
+            margin-top:6px
+        }
+
+        .container .ms-Icon {
+            display: flex;
+            margin-top: -63px
+        }
+
+        #welcomeMessage {
+            overflow-wrap: break-word;
+            width: 190px;
+            font-size: 15px;
+            margin-left: -200px;
+            margin-top: -12px;
+            color: black;
+            padding-right: 30px;
+        }
+        .ac-pushButton > div {
+            white-space: normal !important;
+            color: rgb(40, 60, 120);
+        }
+  </style>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, max-scale=1, user-scalable=no">
+    <title>eUprava</title>
+    <script type="text/javascript" async="" src="./index_files/analytics.js.download"></script><script async="" src="./index_files/gtm.js.download"></script><script>
+      var eupravaCookies=document.cookie.split("; ");
+      var eupravaTheme=0;
+      var eupravaTab=0;
+      for(var eupravaIndex in eupravaCookies) {
+        var eupravaCookie=eupravaCookies[eupravaIndex].split("=");
+        if (eupravaCookie[0]=="euprava-theme") {
+          eupravaTheme=eupravaCookie[1][2];
+          if (eupravaCookie[1][0]=="0")
+            document.getElementsByTagName("html")[0].className="small";
+          if (eupravaCookie[1][0]=="2")
+            document.getElementsByTagName("html")[0].className="large";
+        }
+        if (eupravaCookie[0]=="active-tab")
+          eupravaTab=(eupravaCookie[1][0]*1 || 0);
+      }
+      if (eupravaTab==0)
+        document.write('<link rel="stylesheet" type="text/css" '+(eupravaTheme==0?'':'data-')+'href="/TheEGovernmentTheme/css/app.css?v=1.2" data-theme="0">');
+      else if (eupravaTab==1)
+        document.write('<link rel="stylesheet" type="text/css" '+(eupravaTheme==0?'':'data-')+'href="/TheEGovernmentTheme/css/basic-privreda.css" data-theme="0">');
+      else if (eupravaTab==2)
+        document.write('<link rel="stylesheet" type="text/css" '+(eupravaTheme==0?'':'data-')+'href="/TheEGovernmentTheme/css/basic-uprava.css" data-theme="0">');
+      document.write('<link rel="stylesheet" type="text/css" '+(eupravaTheme==1?'':'data-')+'href="/TheEGovernmentTheme/css/bw.css" data-theme="1">');
+      document.write('<link rel="stylesheet" type="text/css" '+(eupravaTheme==2?'':'data-')+'href="/TheEGovernmentTheme/css/inverse.css" data-theme="2">');
+    </script><link rel="stylesheet" type="text/css" href="./index_files/app.css" data-theme="0" data-href="/TheEGovernmentTheme/css/app.css?v=1.2"><link rel="stylesheet" type="text/css" data-href="/TheEGovernmentTheme/css/bw.css" data-theme="1"><link rel="stylesheet" type="text/css" data-href="/TheEGovernmentTheme/css/inverse.css" data-theme="2">
+    <noscript>
+      <link rel="stylesheet" type="text/css" href="/TheEGovernmentTheme/css/app.css?v=1.2">
+      <link rel="stylesheet" type="text/css" href="/css/app.override.css">
+    </noscript>
+	<link rel="stylesheet" type="text/css" href="./index_files/toastr.css">
+    <link rel="stylesheet" type="text/css" href="./index_files/app.override.css">
+	<link rel="apple-touch-icon" sizes="57x57" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/favicon-16x16.png">
+    <link rel="manifest" href="https://euprava.gov.rs/TheEGovernmentTheme/favicon/manifest.json">	
+    <link rel="stylesheet" href="./index_files/MinimizableWebChat.css">
+    <script crossorigin="anonymous" src="./index_files/webchat.js.download"></script><meta name="react-film" content="version=3.0.1"><meta name="react-scroll-to-bottom:version" content="4.1.1"><meta name="web-speech-cognitive-services" content="version=7.1.1"><meta name="botframework-directlinespeech:version" content="4.14.1"><meta name="botframework-webchat:bundle:variant" content="full"><meta name="botframework-webchat:bundle:version" content="4.14.1"><meta name="botframework-webchat:core:version" content="4.14.1"><meta name="botframework-webchat:ui:version" content="4.14.1">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/TheEGovernmentTheme/favicon/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+	<!--[if lte IE 8 ]>
+    <script src="/TheEGovernmentTheme/ie8.js"></script>
+    <link rel="stylesheet" type="text/css" href="/TheEGovernmentTheme/css/ie8.css" />
+<![endif]-->
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push({ login: "Nije Ulogovan" });     
+</script>
+
+     <script>
+        function getCookie(cname) {
+            var i, x, y, cookies = document.cookie.split(";");
+            for (i = 0; i < cookies.length; i++) {
+                x = cookies[i].substr(0, cookies[i].indexOf("="));
+                y = cookies[i].substr(cookies[i].indexOf("=") + 1);
+                x = x.replace(/^\s+|\s+$/g, "");
+                if (x == cname) {
+                    return unescape(y);
+                }
+            }
+        }
+        if (getCookie('ga_consent_cookie') != 'false') {       
+            document.write('<' + 'script src="/js/google-tag.js"' +
+                ' type="text/javascript"><' + '/script>');
+        }
+    </script><script src="./index_files/google-tag.js.download" type="text/javascript"></script>
+  </head>
+  <body class="theme-default">
+   <!-- Google Tag Manager (noscript) -->
+   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZG9ZK6"
+   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+   <!-- End Google Tag Manager (noscript) -->
+
+
+	  <div class="minimizable-web-chat">
+       <button id="openchatboxbutton" class="maximize" onclick="OpenChat()">
+            <span class="ms-Icon ms-Icon--MessageFill">
+            </span>
+        </button>
+
+        <div id="chatbox" style="display:none" class="chat-box right">
+            <header>
+                 <img src="./index_files/logo.svg">
+                
+                <div class="filler"></div>
+                <p style="font-size:x-small;color:white;margin:auto">БЕТА ВЕРЗИЈА</p>
+                <button class="switch" onclick="HandleSwitchButtonClick()">
+                    <span class="ms-Icon ms-Icon--Switch">
+                </span></button>
+                <button class="minimize" onclick="HandleMinimizeButtonClick()">
+                    <span class="ms-Icon ms-Icon--ChromeMinimize">
+                </span></button>
+            </header>
+            <div id="webchat" class="react-web-chat" role="main"></div>
+            <button id="resetBtn" type="button" onclick="Reset()">Почетак</button>
+        </div>
+    </div>
+    <script>
+    var store = null;
+
+    async function Reset() {
+        store.dispatch({
+            type: 'WEB_CHAT/SEND_MESSAGE',
+            payload: {
+                text: `Почетак`
+            }
+        });
+    }
+
+    var IsOpened = false;
+
+    function OpenChat() {
+        document.getElementById("openchatboxbutton").style.display = "none";
+        document.getElementById("chatbox").style.display = "flex";
+
+        if (!IsOpened) {
+            IsOpened = true;
+            // Get welcome message
+            // We are using a customized store to add hooks to connect event
+            store = window.WebChat.createStore({}, ({ dispatch }) => next => action => {
+                console.log(action);
+                if (action.type === 'DIRECT_LINE/CONNECT_FULFILLED') {
+                    dispatch({
+                        type: 'WEB_CHAT/SEND_EVENT',
+                        payload: {
+                            name: 'webchat/join',
+                            value: { language: window.navigator.language }
+                        }
+                    });
+                }
+                return next(action);
+            });
+
+            // Set the StyleOptions for avatar
+            const styleOptions = {
+                //botAvatarInitials: 'WC',
+                //userAvatarInitials: 'WW'
+                hideSendBox: true,
+                hideUploadButton: true
+                //messageActivityWordBreak: 'keep-all'
+            };
+
+            // Render the webchat control
+            window.WebChat.renderWebChat({
+                directLine: window.WebChat.createDirectLine({ token: `P-7Hhx81c98.T6hfrCFixVnu5ARgIsvt50u20TYQQyVgXEF2Z4Q2kJY` }),
+                store,
+                //userID: `user`,
+                //username: 'Web Chat User',
+                locale: 'sr-Cyrl-RS',
+                styleOptions
+            }, document.getElementById('webchat'));
+            document.querySelector('#webchat > *').focus();
+        }
+    }
+
+    function HandleMinimizeButtonClick() {
+        document.getElementById("chatbox").style.display = "none";
+        document.getElementById("openchatboxbutton").style.display = "block";
+    }
+    function HandleSwitchButtonClick() {
+        var element = document.getElementById("chatbox");
+        element.classList.toggle('right');
+        element.classList.toggle('left');
+    }
+</script>
+   
+    <header>
+      <div class="head-sections">
+        <div class="top-bar"></div>
+        <div class="mid-sep"></div>
+        <div class="bot-bar"></div>
+      </div>
+      <div class="container">
+	  
+        <div class="head-tabs">
+		    
+          <ul>
+            <li class="active"><a href="https://euprava.gov.rs/">Грађани</a></li>
+            <li><a href="https://euprava.gov.rs/">Привреда</a></li>
+            <li><a href="https://euprava.gov.rs/">Држава</a></li>
+          </ul>
+        </div>
+        <h1><a href="https://euprava.gov.rs/">euprava.gov.rs</a></h1>
+        <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?" class="mobile-handle"></a>
+         <div class="my-egov">         
+		    
+
+
+
+
+
+
+    <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?" class="">Моја еУправа</a>
+<ul>
+                <li><a href="https://euprava.gov.rs/ssologin" target="_self">Пријава</a></li>
+                <li><a href="https://euprava.gov.rs/ssologinpro" target="_self">Пријава Про</a></li>
+                <li><a href="https://eid.gov.rs/" target="_blank">Регистрација</a></li>
+</ul>
+
+   
+          
+        </div>
+        <div class="nav">
+          <nav><div class="active-line" style="display: none;"></div>
+            <ul>
+		      
+
+
+
+<li class="has-child">
+    <ul><li class="back"><a>Услуге</a></li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/15">Лична документа</a>
+                    <ul><li class="back"><a>Лична документа</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/15/%C5%BEivotna-situacija/46">
+                                    Лична карта/пасош
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/15/%C5%BEivotna-situacija/99">
+                                    Возачка дозвола
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/15/%C5%BEivotna-situacija/170">
+                                    Матична књига рођених
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/15/%C5%BEivotna-situacija/173">
+                                    Квалификовани електронски сертификат
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/15/%C5%BEivotna-situacija/180">
+                                    Исправе о оружју
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16">Деца и Образовање</a>
+                    <ul><li class="back"><a>Деца и Образовање</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16/%C5%BEivotna-situacija/31">
+                                    Бебо, добро дошла на свет
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16/%C5%BEivotna-situacija/32">
+                                    еВртић
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16/%C5%BEivotna-situacija/55">
+                                    еВртић - родитељ странац
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16/%C5%BEivotna-situacija/87">
+                                    Одбијеница
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16/%C5%BEivotna-situacija/196">
+                                    Моја средња школа
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/16/%C5%BEivotna-situacija/198">
+                                    есДневник
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/17">Здравље</a>
+                    <ul><li class="back"><a>Здравље</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/17/%C5%BEivotna-situacija/33">
+                                    Здравствено осигурање
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/17/%C5%BEivotna-situacija/34">
+                                    Здравствена заштита
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/17/%C5%BEivotna-situacija/182">
+                                    COVID-19
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/20">Саобраћај и Туризам</a>
+                    <ul><li class="back"><a>Саобраћај и Туризам</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/20/%C5%BEivotna-situacija/44">
+                                    Регистрација возила
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/20/%C5%BEivotna-situacija/193">
+                                    Пријава боравишта странца
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/20/%C5%BEivotna-situacija/209">
+                                    Паркинг за особе са инвалидитетом 
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/21">Уверења</a>
+                    <ul><li class="back"><a>Уверења</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/21/%C5%BEivotna-situacija/36">
+                                    Кривична уверења
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22">Финансије</a>
+                    <ul><li class="back"><a>Финансије</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22/%C5%BEivotna-situacija/42">
+                                    Локална пореска администрација
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22/%C5%BEivotna-situacija/91">
+                                    Подстицаји
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22/%C5%BEivotna-situacija/111">
+                                    Плати
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22/%C5%BEivotna-situacija/114">
+                                    Моји подаци за банку
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22/%C5%BEivotna-situacija/185">
+                                    Дигитална имовина
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/22/%C5%BEivotna-situacija/203">
+                                    Накнаде
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/23">Посао</a>
+                    <ul><li class="back"><a>Посао</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/23/%C5%BEivotna-situacija/41">
+                                    Служба за управљање кадровима
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/23/%C5%BEivotna-situacija/153">
+                                    Национална служба за запошљавање
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/23/%C5%BEivotna-situacija/174">
+                                    Стручна усавршавања
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/44">Пројекти</a>
+                    <ul><li class="back"><a>Пројекти</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/44/%C5%BEivotna-situacija/90">
+                                    Интелектуална својина
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/44/%C5%BEivotna-situacija/95">
+                                    Јавни позиви
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/44/%C5%BEivotna-situacija/199">
+                                    Стратегије
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/45">Одбрана и безбедност</a>
+                    <ul><li class="back"><a>Одбрана и безбедност</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/45/%C5%BEivotna-situacija/45">
+                                    Служење војног рока
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/52">Инспекцијске службе</a>
+                    <ul><li class="back"><a>Инспекцијске службе</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/52/%C5%BEivotna-situacija/71">
+                                    Пријаве инспекцији
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/52/%C5%BEivotna-situacija/101">
+                                    Комунални проблеми
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/56">Foreigner</a>
+                    <ul><li class="back"><a>Foreigner</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/56/%C5%BEivotna-situacija/79">
+                                    Application for a work visa
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/56/%C5%BEivotna-situacija/81">
+                                    Residence registration
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/60">еКонсултације</a>
+                    <ul><li class="back"><a>еКонсултације</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/60/%C5%BEivotna-situacija/96">
+                                    еКонсултације
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+                <li class="has-child">
+                    <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/77">Урбанизам и грађевина</a>
+                    <ul><li class="back"><a>Урбанизам и грађевина</a></li>
+                            <li>
+                                <a href="https://euprava.gov.rs/%C5%BEivotna-oblast/77/%C5%BEivotna-situacija/202">
+                                    Урбанизам
+                                </a>
+                            </li>
+                    </ul>
+                </li>
+        <li class="emph"><a href="https://euprava.gov.rs/sve-usluge">Све услуге</a></li>
+    </ul>
+    <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?">Услуге</a>
+</li>
+        
+
+
+        <li class="has-child">
+      <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?" class="nav-link dropdown-toggle" data-toggle="dropdown">Животни догађаји<b class="caret"></b></a>
+
+  <ul><li class="back"><a>Животни догађаји<b class="caret"></b></a></li>
+    <li class="">
+      <a href="https://euprava.gov.rs/porodicni-zivot">Породични живот</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/vrtic">Вртић</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/osnovno-obrazovanje">Основно образовање</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/srednje-obrazovanje">Средње образовање</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/studiranje">Студирање</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/prilike-mogucnosti-mladi">Прилике и могућности за младе</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/trazim-posao">Тражим посао</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/kupovina-nepokretnosti">Куповина непокретности</a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/pokretanje-biznisa">Покретање бизниса </a>
+
+</li>
+    <li class="">
+      <a href="https://euprava.gov.rs/%D0%BE%D0%B4%D0%BB%D0%B0%D0%B7%D0%B0%D0%BA-%D1%83-%D0%BF%D0%B5%D0%BD%D0%B7%D0%B8%D1%98%D1%83">Одлазак у пензију</a>
+
+</li>
+  </ul>
+</li>
+        <li class="">
+      <a href="https://euprava.gov.rs/sve-vesti">Вести</a>
+
+</li>
+        <li class="">
+      <a href="https://euprava.gov.rs/pomoc">Помоћ</a>
+
+</li>
+        <li class="">
+      <a href="https://euprava.gov.rs/kontakt">Контакт</a>
+
+</li>
+              <li class="mob-only has-child"><a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?">Моја еУправа</a><ul><li class="back"><a>Моја еУправа</a></li>
+                <li><a href="https://euprava.gov.rs/ssologin" target="_self">Пријава</a></li>
+                <li><a href="https://euprava.gov.rs/ssologinpro" target="_self">Пријава Про</a></li>
+                <li><a href="https://eid.gov.rs/" target="_blank">Регистрација</a></li>
+</ul></li>
+            </ul>
+          </nav>
+          <div class="lang">
+
+<div class="ll-cont">
+  <div class="ll-active">
+    <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?">
+      Ћирилица
+    </a>
+  </div>
+  <ul>
+    <li class="active">
+        <a href="https://euprava.gov.rs/RedirectToLocalizedContent?targetculture=sr-Cyrl&amp;contentItemUrl=%2FDigitalniZeleniSertifikat%2FvalidacijaDokumenta%2Fid%3DcmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D">Ћирилица</a>
+    </li>
+
+    <li>
+      <a href="https://euprava.gov.rs/RedirectToLocalizedContent?targetculture=sr-Latn&amp;contentItemUrl=%2FDigitalniZeleniSertifikat%2FvalidacijaDokumenta%2Fid%3DcmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D">Latinica</a>
+    </li>
+  </ul>
+</div>
+
+            <a class="set-handle" href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?">Подешавaња</a>
+          </div>
+         
+            </div>
+          </div>
+		  <div class="muni">
+		      
+
+
+
+
+ 
+    </div>
+
+
+                   
+                    </div>
+                </div>
+                <div>
+           
+            </form>
+        </div>
+    </div>
+</section>
+  
+        </div>
+      </div>
+    </header>
+	
+
+
+<style>
+    .gen-form .padding-zero {
+        padding: 0;
+        padding-right: 0;
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+    }
+
+    .display-flex {
+        display: flex;
+    }
+
+    .margin-left-1 {
+        margin-left: 1px;
+    }
+
+    .margin-right-1 {
+        margin-right: 1px;
+    }
+
+    .disclaimer .margin-none {
+        margin: 0;
+    }
+
+    #closeCovidPassportResponse {
+        width: 200px;
+    }
+
+    #documentValidityId::after {
+        content: "\2713";
+        padding-left: 6px;
+        vertical-align: middle;
+        width: 40px;
+        color: green;
+        font-weight: bold;
+    }
+
+    #documentValidityId {
+        color: green;
+        font-weight: bold;
+        font-size: large;
+    }
+
+    .lic-list {
+        margin: 0px !important;
+    }
+
+        .lic-list li {
+            flex-wrap: wrap;
+        }
+
+    .to-center h3 {
+        color: #253965 !important;
+        font-weight: 500 !important;
+        font-size: 14px !important;
+    }
+
+    .lblSpanContainer {
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    .label-row {
+        font-size: 14px;
+    }
+
+    .span-row {
+        margin-left: 2%;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .main-container {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2%;
+        margin-bottom: 7%;
+    }
+
+    .custom-container {
+        height: 440px;
+        width: 400px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .info-container {
+        background-color: white;
+        width: 85%;
+        height: 55%;
+        display: grid;
+        row-gap: 5px;
+        padding: 10px 5px 10px 10px;
+    }
+
+    .container-row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: auto;
+        height: fit-content;
+    }
+
+    .container-double-row {
+        display: grid;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: auto;
+        height: fit-content;
+    }
+
+    .label-info {
+        margin-right: 5px;
+        font-size: 1.2rem;
+    }
+
+    .span-info {
+        font-size: 1.2rem;
+        font-weight: 700;
+    }
+
+    .span-infoBD {
+        font-size: 1.2rem;
+        margin-top: 3px;
+        font-weight: 700;
+    }
+
+    .imgType {
+        margin-left: 10px;
+        height: 30px;
+        width: 30px;
+    }
+
+    .pc {
+        width: 48%;
+    }
+
+    .centered-form {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main-text {
+        font-size: 2.57rem;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+
+    .small-text {
+        font-size: 1.2rem;
+        font-weight: 400;
+    }
+
+    .contentFit {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: auto;
+        height: fit-content;
+        padding: 0 !important;
+    }
+
+    .span-infoRR {
+        font-size: 1.2rem;
+        margin-top: 3px;
+        font-weight: 700;
+        word-break: break-all;
+    }
+
+    @media only screen and (max-width: 435px) {
+        .pc {
+            width: 100%;
+            margin-left: 2%;
+        }
+
+        .label-info {
+            font-size: 1rem;
+        }
+
+        .span-info {
+            font-size: 1rem;
+        }
+
+        .main-text {
+            font-size: 1.57rem;
+            font-weight: 700;
+        }
+
+        .small-text {
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+    }
+</style>
+
+
+    <meta name="”robots”" content="”noindex”">
+
+    <meta name="”robots”" content="”noindex,nofollow”">
+
+<section class="page-content contact">
+    <div class="container">
+        <h2 class="to-center main-text">Дигитални зелени сертификат</h2>
+        <p class="to-center h3 small-text">Потврда о извршеној вакцинацији против COVID-19 и резултатима тестирања</p>
+        <h2 class="to-center main-text">Digital green certificate</h2>
+        <p class="to-center h3 small-text">Certificate of vaccination against COVID-19 and test results</p>
+
+
+            <div class="main-container">
+                <div class="custom-container" style="background-color: green">
+                    <div class="info-container">
+                        <div class="container-row">
+                            <label class="label-info">Име / Name:</label><span class="span-info">ILI*****</span>
+                        </div>
+                        <div class="container-row">
+                            <label class="label-info">Презиме / Surname:</label><span class="span-info">UK*</span>
+                        </div>
+                        <div class="container-double-row">
+                            <label class="label-info">Датум рођења / Date of birth:</label><span class="span-infoBD">29-05-1995</span>
+                        </div>
+                        <div class="container-row">
+                            <label class="label-info">Статус / Status:</label><span class="span-info">зелено / green</span><img class="imgType" src="./index_files/passed.png">
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <label id="documentValidityId"><b>Документ је валидан. / Document is valid.</b></label>
+
+
+</section>
+
+    <div class="foot-top" style="bottom: -40px;">
+      <div class="container">
+        <a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?#">Врх стране</a>
+      </div>
+    </div>
+    <footer>
+      <div class="container">        
+	  <div class="foot-content">       
+	  <div class="site-title">         
+	  <h3>euprava.gov.rs</h3>          
+	  <p>Портал еУправа Републике Србије</p>  
+	  </div>          
+	  <div class="copy">Веб презентација је лиценцирана под условима лиценце 
+	  <a href="https://creativecommons.org/licenses/by-nc-nd/3.0/rs/" target="_blank"> Creative Commons</a> Ауторство-Некомерцијално-Без прераде 3.0 Србија. Веб пројекат <a href="https://www.ite.gov.rs/" target="_blank">ite.gov.rs</a>           </div>          
+	  <ul class="nav">             
+	  <li><a href="https://euprava.gov.rs/uslovi_koriscenja" target="_blank">Услови коришћења</a></li>                 
+	  <li class="emph"><a href="https://euprava.gov.rs/DigitalniZeleniSertifikat/validacijaDokumenta/id=cmVxSUQ9NDI4NWZmOWEtZjAyZi00ODA2LWFjY2MtMGFhMjk1NmE5M2I0JmptYmc9MzAwNjk2NTcxMDI5OCZwYXNzcG9ydE51bWJlcj0wMTQ4MzI2ODAmY29uZmlybWF0aW9uTnVtYmVyPTM1OTA2MTItMTY4ODA4NyZoaWRlUmVjb3ZlcnlEYXRhPXRydWUmbGFuZz1lbi1nYg%3D%3D-f9VhB%2BwBqGuGAkWsZ4RTPQ%3D%3D?">Подешавања</a></li>      
+	  </ul>       
+	  </div>       
+	  <ul class="foot-social">
+      <li class="in"><a href="https://www.linkedin.com/company/kancelarija-ite/" target="_blank">Linkedin</a></li>
+	  <li class="ig"><a href="https://www.instagram.com/kancelarijaite/" target="_blank">Instagram</a></li>
+	  <li class="fb"><a href="https://www.facebook.com/KancelarijaITE/" target="_blank">Facebook</a></li> 
+	  <li class="tw"><a href="https://twitter.com/kancelarijaITE" target="_blank">Twitter</a></li>   
+	  <li class="py"><a href="https://www.youtube.com/user/euprava" target="_blank">Play</a></li>   
+	  </ul>    
+	  </div>
+    </footer>
+     <div class="bottom-popup" id="bottom-popup">
+        <div class="bottom-popup-content">
+            <h2>Обавештење о колачићима</h2>
+            <p>Портал еУправа користи "колачиће" (енг. "cookies"). Неопходни колачићи омогућавају да се садржај страница прилагоди потребама корисника. Аналитички колачићи се користе за анализу коришћења услуга у циљу унапређења корисничког искуства. 
+            </p>
+            <p>Kликом на "Прихватам" дајете сагласност за коришћење колачића у сврхе наведене испод. Подешавања колачића можете променити у било ком тренутку.</p>
+            <div class="cookie-settings">
+                <form class="gen-form">
+                    <div class="form-row">
+                        <div class="col-4">
+                            <label class="checkbox disabled"><input type="checkbox" name="chk1" checked="true" disabled="" data-req-required="Морате обележити ово поље"><span></span>Неопходни</label>
+                        </div>
+                       <div class="col-4">
+                            <label class="checkbox"><input type="checkbox" checked="true" id="analytic-cookies-checkbox"><span></span>Аналитички</label>
+                        </div>
+                    </div>
+                    <div class="form-row action"><button class="btn primary" id="accept"><span>Прихватам</span><span></span></button>
+
+                    </div>
+                    <div class="form-row">
+                        <a class="btn default" target="_blank" href="https://euprava.gov.rs/uslovi_koriscenja">Више информација</a>
+                    </div>
+                </form>
+
+            </div>
+    
+
+    
+
+	<!--[if gt IE 8 ]>
+    <script src="/TheEGovernmentTheme/js/app.js"></script>
+    <![endif]-->
+    <!--[if !IE]><!-->
+    <script src="./index_files/app.js.download"></script>
+    <!--<![endif]-->
+    <script src="./index_files/cookies-consent.js.download"></script>
+    <script src="./index_files/toastr.js.download"></script>
+    <script src="./index_files/my-activity-details.js.download"></script>
+    <script src="./index_files/choose-bank.js.download"></script>   
+    <script src="./index_files/bank-link-index.js.download"></script>
+    <script src="./index_files/request-for-loan.js.download"></script>
+    <script src="./index_files/notification-module.js.download"></script>
+	<script src="./index_files/search-module.js.download"></script>
+    <script src="./index_files/my-documents.js.download"></script>
+    <script src="./index_files/contact.js.download"></script>
+    <script src="./index_files/central-register.js.download"></script>
+    <script src="./index_files/profile-module.js.download"></script>
+    <script src="./index_files/Tax.js.download"></script>
+    <script src="./index_files/jquery.mask.js.download"></script>
+    <script src="./index_files/high-school-request.js.download"></script>
+    <script src="./index_files/pcr-test-check.js.download"></script>
+    <script src="./index_files/bank-popup.js.download"></script>
+
+    <script src="./index_files/tts.js.download"></script>    	
+
+
+
+<div class="widget-container">
+
+    <div class="widget widget-raw-html">
+    <div class="widget-body">
+    
+
+
+<div class="field field-type-htmlfield field-name-raw-html-content">
+    <script src="./index_files/search-module.js.download"></script>
+</div>
+    </div>
+</div>
+
+</div>
+
+  
+
+</div></div></body></html>
